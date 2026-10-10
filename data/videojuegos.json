@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Neón Racer",
+    "categoria": "Carreras",
+    "precio": 19990,
+    "descripcion": "Carreras futuristas a toda velocidad por circuitos llenos de neón y adrenalina.",
+    "imagen": "img/neon-racer.svg"
+  },
+  {
+    "id": 2,
+    "nombre": "Sombras del Reino",
+    "categoria": "RPG",
+    "precio": 34990,
+    "descripcion": "Un RPG épico de fantasía donde tus decisiones moldean el destino del reino.",
+    "imagen": "img/sombras-reino.svg"
+  },
+  {
+    "id": 3,
+    "nombre": "Galaxia en Guerra",
+    "categoria": "Acción",
+    "precio": 29990,
+    "descripcion": "Acción espacial frenética: defiende la galaxia en intensos combates por turnos reales.",
+    "imagen": "img/galaxia-guerra.svg"
+  },
+  {
+    "id": 4,
+    "nombre": "Isla Perdida",
+    "categoria": "Aventura",
+    "precio": 24990,
+    "descripcion": "Explora una isla misteriosa, resuelve enigmas y sobrevive a lo desconocido.",
+    "imagen": "img/isla-perdida.svg"
+  },
+  {
+    "id": 5,
+    "nombre": "Táctica Suprema",
+    "categoria": "Estrategia",
+    "precio": 27990,
+    "descripcion": "Estrategia por turnos donde cada movimiento define la victoria o la derrota.",
+    "imagen": "img/tactica-suprema.svg"
+  },
+  {
+    "id": 6,
+    "nombre": "Copa Mundial 25",
+    "categoria": "Deportes",
+    "precio": 39990,
+    "descripcion": "El simulador de fútbol más completo con ligas, torneos y modo carrera.",
+    "imagen": "img/copa-mundial.svg"
+  },
+  {
+    "id": 7,
+    "nombre": "Puzzle Mente",
+    "categoria": "Puzzle",
+    "precio": 9990,
+    "descripcion": "Cientos de acertijos para ejercitar la mente, del nivel fácil al experto.",
+    "imagen": "img/puzzle-mente.svg"
+  },
+  {
+    "id": 8,
+    "nombre": "Terror en la Niebla",
+    "categoria": "Terror",
+    "precio": 22990,
+    "descripcion": "Una experiencia de survival horror que pondrá a prueba tus nervios.",
+    "imagen": "img/terror-niebla.svg"
+  }
+]
