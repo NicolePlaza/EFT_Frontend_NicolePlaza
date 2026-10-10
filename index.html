@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GameZone - Tienda online de venta de videojuegos. HTML5, CSS3, JavaScript y Bootstrap 5.">
+  <title>GameZone | Tienda de Videojuegos</title>
+
+  <!-- Bootstrap 5 (CSS) -->
+  <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="lib/icons/bootstrap-icons.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER + NAV ===================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">
+          <i class="bi bi-controller"></i> GameZone
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main>
+
+    <!-- Hero / Inicio -->
+    <section id="inicio" class="hero text-center text-white d-flex align-items-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Tu próxima aventura empieza aquí</h1>
+        <p class="lead">Los mejores videojuegos al mejor precio. Explora nuestro catálogo y encuentra tu favorito.</p>
+        <a href="#catalogo" class="btn btn-primary btn-lg mt-2">
+          <i class="bi bi-bag"></i> Ver catálogo
+        </a>
+      </div>
+    </section>
+
+    <!-- Catálogo de productos -->
+    <section id="catalogo" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-2">Catálogo de videojuegos</h2>
+        <p class="text-center text-muted mb-4">Filtra por categoría para encontrar lo que buscas.</p>
+
+        <!-- Filtro por categoría -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" id="filtros" role="group" aria-label="Filtro por categoría">
+          <!-- Los botones de filtro se generan dinámicamente con JavaScript -->
+        </div>
+
+        <!-- Contenedor de tarjetas (se llena dinámicamente desde JavaScript) -->
+        <div class="row g-4" id="contenedorProductos">
+          <!-- Las tarjetas de videojuegos se generan dinámicamente con JavaScript -->
+        </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <p id="sinResultados" class="text-center text-muted mt-4 d-none">
+          No se encontraron videojuegos en esta categoría.
+        </p>
+      </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <form id="formContacto" novalidate>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre"
+                       placeholder="Tu nombre" required>
+                <div class="invalid-feedback">Por favor ingresa tu nombre (mínimo 3 caracteres).</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email"
+                       placeholder="tucorreo@ejemplo.com" required>
+                <div class="invalid-feedback">Por favor ingresa un email válido.</div>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
+                          placeholder="Escribe tu mensaje" required></textarea>
+                <div class="invalid-feedback">Por favor escribe un mensaje (mínimo 10 caracteres).</div>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">
+                  <i class="bi bi-send"></i> Enviar mensaje
+                </button>
+              </div>
+              <!-- Mensaje de éxito -->
+              <div id="mensajeExito" class="alert alert-success mt-3 d-none" role="alert">
+                <i class="bi bi-check-circle"></i> ¡Mensaje enviado correctamente! Pronto te contactaremos.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-1"><i class="bi bi-controller"></i> <strong>GameZone</strong></p>
+      <p class="mb-1 small">Tienda online de videojuegos — Proyecto académico EFT Desarrollo Frontend I (PFY2201).</p>
+      <p class="mb-0 small text-secondary">&copy; <span id="anio"></span> GameZone. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 (JS Bundle con Popper) -->
+  <script src="lib/js/bootstrap.bundle.min.js"></script>
+  <!-- Lógica de la aplicación -->
+  <script src="js/app.js"></script>
+</body>
+</html>

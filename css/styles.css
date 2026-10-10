@@ -1,0 +1,89 @@
+/* ============================================================
+   GameZone - Estilos personalizados
+   Complementan a Bootstrap 5. Uso de variables, Flexbox y CSS Grid.
+   ============================================================ */
+
+:root {
+  --color-primario: #6610f2;
+  --color-secundario: #f107a3;
+  --color-oscuro: #141e30;
+}
+
+/* Compensa la navbar fija para que las secciones no queden ocultas */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  padding-top: 56px; /* alto de la navbar fija */
+}
+
+/* Para que los anchors (#catalogo, #contacto) no queden bajo la navbar */
+section {
+  scroll-margin-top: 70px;
+}
+
+/* ---------------- HERO (Flexbox) ---------------- */
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(135deg, var(--color-oscuro) 0%, var(--color-primario) 100%);
+  /* Flexbox: centra el contenido vertical y horizontalmente */
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------- Tarjetas de videojuegos ---------------- */
+.card-juego {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.card-juego:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.18) !important;
+}
+
+.card-juego .card-img-top {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* El cuerpo de la tarjeta usa Flexbox en columna para alinear el botón abajo */
+.card-juego .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-juego .precio {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.card-juego .btn {
+  margin-top: auto; /* empuja el botón al fondo de la tarjeta */
+}
+
+/* Badge de categoría */
+.badge-categoria {
+  background-color: var(--color-secundario);
+}
+
+/* ---------------- Botones de filtro activos ---------------- */
+#filtros .btn.activo {
+  background-color: var(--color-primario);
+  color: #fff;
+  border-color: var(--color-primario);
+}
+
+/* ---------------- Ejemplo de CSS Grid (responsive) ----------------
+   Alternativa a la grilla de Bootstrap para demostrar dominio de Grid.
+   Se aplica solo en pantallas grandes como refuerzo visual. */
+@media (min-width: 992px) {
+  .grid-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+}
